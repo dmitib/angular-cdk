@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "angular-cdk"
+  "defaultProject": "angular-cdk",
+  "cli": {
+    "analytics": false
+  }
 }
