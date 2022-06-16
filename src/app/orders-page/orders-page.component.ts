@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActionsService } from '../actions.service';
 
 export interface Order {
   item: string;
@@ -20,9 +21,10 @@ export class OrdersPageComponent implements OnInit {
   displayedColumns: string[] = ['item', 'address', 'country'];
   dataSource = ORDERS_DATA;
 
-  constructor() { }
+  constructor(private actions: ActionsService) { }
 
   ngOnInit(): void {
+    this.actions.switchContext('orders');
   }
 
 }

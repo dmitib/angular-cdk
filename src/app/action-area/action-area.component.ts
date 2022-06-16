@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActionsService } from '../actions.service';
 
 @Component({
   selector: 'app-action-area',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActionAreaComponent implements OnInit {
 
-  constructor() { }
+  constructor(public actions: ActionsService) { }
 
   ngOnInit(): void {
   }
